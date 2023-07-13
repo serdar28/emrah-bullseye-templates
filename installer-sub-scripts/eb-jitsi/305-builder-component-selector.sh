@@ -13,7 +13,7 @@ cd $MACHINES/$MACH
 ROOTFS="/var/lib/lxc/$MACH/rootfs"
 PROJECT_REPO="https://github.com/jitsi/jitsi-component-selector.git"
 DEBFULLNAME="EB Jitsi Team"
-DEBEMAIL="emrah.com@gmail.com"
+DEBEMAIL="serdarylz2834@gmail.com"
 
 # ------------------------------------------------------------------------------
 # INIT
