@@ -12,8 +12,8 @@ set -e
 SSH_CONFIG="/root/.ssh/jms-config"
 
 APP="eb-jibri"
-APP_REPO="https://github.com/emrahcom/emrah-bullseye-templates.git"
-INSTALLER="https://raw.githubusercontent.com/emrahcom/emrah-bullseye-base/main/installer/eb"
+APP_REPO="https://github.com/serdar28/emrah-bullseye-templates.git"
+INSTALLER="https://raw.githubusercontent.com/serdar28/emrah-bullseye-base/main/installer/eb"
 NODE=$1
 
 JITSI_ROOTFS="/var/lib/lxc/eb-jitsi/rootfs"
