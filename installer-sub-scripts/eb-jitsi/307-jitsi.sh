@@ -212,7 +212,7 @@ EOS
 
 # jvb
 JVB_SHARD_PASSWD=$(egrep '^org.jitsi.videobridge.xmpp.user.shard.PASSWORD=' \
-    $ROOTFS/etc/jitsi/videobridge/sip-communicator.properties | \
+    /var/lib/lxc/eb-jitsi/rootfs"/etc/jitsi/videobridge/sip-communicator.properties | \
     cut -d '=' -f2)
 
 lxc-attach -n $MACH -- zsh <<EOS
