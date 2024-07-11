@@ -207,7 +207,7 @@ set -e
 mkdir -p /root/meta
 chmod 700 /root/meta
 
-
+echo $JITSI_FQDN >/root/meta/jitsi-fqdn
 EOS
 
 # jvb
