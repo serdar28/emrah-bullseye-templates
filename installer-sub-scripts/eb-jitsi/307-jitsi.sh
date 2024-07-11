@@ -207,19 +207,18 @@ set -e
 mkdir -p /root/meta
 chmod 700 /root/meta
 
-echo $JITSI_FQDN >/root/meta/jitsi-fqdn
+
 EOS
 
 # jvb
 JVB_SHARD_PASSWD=$(egrep '^org.jitsi.videobridge.xmpp.user.shard.PASSWORD=' \
     $ROOTFS"/etc/jitsi/videobridge/sip-communicator.properties | \
     cut -d '=' -f2)
-    
-echo '$JVB_SHARD_PASSWD' > $ROOTFS/root/meta/jvb-shard-passwd
-chmod 600 $ROOTFS/root/meta/jvb-shard-passwd
 
 lxc-attach -n $MACH -- zsh <<EOS
 set -e
+echo '$JVB_SHARD_PASSWD' > $ROOTFS/root/meta/jvb-shard-passwd
+chmod 600 $ROOTFS/root/meta/jvb-shard-passwd
 
 VERSION=\$(apt-cache policy jitsi-videobridge2 | grep Installed | rev | \
     cut -d' ' -f1 | rev)
